@@ -6,4 +6,4 @@ COPY update_openssl /etc/periodic/15min/update_openssl
 
 RUN chmod a+x /etc/periodic/15min/update_openssl
 
-ENTRYPOINT ["/bin/ash"]
+CMD ["crond", "-l 2", "-f"]
