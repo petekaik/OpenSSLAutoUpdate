@@ -1,2 +1,4 @@
 #!/bin/sh
-apk update && apk add --no-cache --upgrade openssl && apk cache clean
+apk update >> /var/log/apk.log
+apk add --no-cache --upgrade openssl >> /var/log/apk.log
+apk cache clean >> /var/log/apk.log
