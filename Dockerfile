@@ -2,7 +2,6 @@ FROM alpine
 
 RUN apk update && apk add --no-cache openssl && rm -rf /var/cache/apk/*
 
-WORKDIR /etc/periodic/15min
-ADD https://github.com/petekaik/OpenSSLAutoUpdate/blob/master/update_openssl ./ && chmod a+x *
+ADD https://github.com/petekaik/OpenSSLAutoUpdate/blob/master/update_openssl /etc/periodic/15min/update_openssl && chmod a+x /etc/periodic/15min/update_openssl
 
 ENTRYPOINT ["openssl"]
