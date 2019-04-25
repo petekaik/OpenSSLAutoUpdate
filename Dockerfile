@@ -6,4 +6,4 @@ ADD https://github.com/petekaik/OpenSSLAutoUpdate/blob/master/update_openssl /et
 
 RUN chmod a+x /etc/periodic/15min/update_openssl
 
-ENTRYPOINT ["openssl"]
+ENTRYPOINT ["/bin/ash"]
