@@ -6,4 +6,4 @@ COPY update_openssl /etc/periodic/15min/update_openssl
 
 RUN chmod a+x /etc/periodic/15min/update_openssl
 
-CMD ["crond", "-l 6", "-f"]
+CMD crond -l 2 -f
